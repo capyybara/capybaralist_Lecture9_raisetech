@@ -1,4 +1,4 @@
-package com.Task9.capybaralist;
+package com.Task9.capybaralist.entity;
 
 public class Zoo {
 

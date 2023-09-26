@@ -1,5 +1,7 @@
-package com.Task9.capybaralist;
+package com.Task9.capybaralist.mapper;
 
+import com.Task9.capybaralist.entity.Capybara;
+import com.Task9.capybaralist.entity.Zoo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

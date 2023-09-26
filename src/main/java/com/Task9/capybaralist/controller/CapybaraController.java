@@ -1,5 +1,8 @@
-package com.Task9.capybaralist;
+package com.Task9.capybaralist.controller;
 
+import com.Task9.capybaralist.mapper.CapybaraMapper;
+import com.Task9.capybaralist.Service.CapybaraService;
+import com.Task9.capybaralist.entity.Zoo;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

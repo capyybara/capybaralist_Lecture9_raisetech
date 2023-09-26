@@ -1,4 +1,6 @@
-package com.Task9.capybaralist;
+package com.Task9.capybaralist.Service;
+
+import com.Task9.capybaralist.entity.Zoo;
 
 import java.util.List;
 
