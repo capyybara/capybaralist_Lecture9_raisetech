@@ -15,8 +15,8 @@ public interface CapybaraMapper {
     List<Zoo> findAll();
 
 
-    @Select("SELECT * FROM capybara WHERE zoo_id = #{zoo_id}")
-    Optional<Capybara> findById(int zoo_id);
+//    @Select("SELECT * FROM capybara WHERE zoo_id = #{zoo_id}")
+//    Optional<Capybara> findById(int zoo_id);
 
 
 

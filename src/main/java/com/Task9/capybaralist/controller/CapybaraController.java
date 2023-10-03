@@ -11,12 +11,12 @@ import java.util.List;
 @RestController
 public class CapybaraController {
 
-//    講義資料をみて作成したもの
-    private final CapybaraService capybaraService;
-
-    public CapybaraController(CapybaraService capybaraService){
-        this.capybaraService = capybaraService;
-    }
+////    講義資料をみて作成したもの
+//    private final CapybaraService capybaraService;
+//
+//    public CapybaraController(CapybaraService capybaraService){
+//        this.capybaraService = capybaraService;
+//    }
 
 
 
