@@ -6,7 +6,6 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
-import java.util.Optional;
 
 @Mapper
 public interface CapybaraMapper {
@@ -16,7 +15,7 @@ public interface CapybaraMapper {
 
 
     @Select("SELECT * FROM capybara WHERE zoo_id = #{zoo_id}")
-    Optional<Capybara> findById(int zoo_id);
+    Capybara findById(int zoo_id);
 
 
 
