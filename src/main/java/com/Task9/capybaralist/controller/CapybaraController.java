@@ -1,6 +1,6 @@
 package com.Task9.capybaralist.controller;
 
-import com.Task9.capybaralist.mapper.CapybaraMapper;
+
 import com.Task9.capybaralist.Service.CapybaraService;
 import com.Task9.capybaralist.entity.Zoo;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,26 +11,25 @@ import java.util.List;
 @RestController
 public class CapybaraController {
 
-////    講義資料をみて作成したもの
-//    private final CapybaraService capybaraService;
-//
-//    public CapybaraController(CapybaraService capybaraService){
-//        this.capybaraService = capybaraService;
-//    }
 
+    private CapybaraService capybaraService;
 
-
-//    動画をみながら模写したもの
-    private final CapybaraMapper capybaraMapper;
-    public CapybaraController(CapybaraMapper capybaraMapper){
-        this.capybaraMapper = capybaraMapper;
+    public CapybaraController(CapybaraService capybaraService){
+        this.capybaraService = capybaraService;
     }
+
+
+
+//    動物園（zoosテーブル）の情報を取得
 
     @GetMapping("/zoos")
     public List<Zoo> zoos(){
-        List<Zoo> zoos = capybaraMapper.findAll();
+        List<Zoo> zoos = capybaraService.findAll();
         return zoos;
     }
+
+
+
 
 
 }
