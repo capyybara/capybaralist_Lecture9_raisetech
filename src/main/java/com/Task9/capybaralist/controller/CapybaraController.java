@@ -22,7 +22,6 @@ import java.util.Optional;
 @RestController
 public class CapybaraController {
 
-
     private CapybaraService capybaraService;
 
     public CapybaraController(CapybaraService capybaraService){

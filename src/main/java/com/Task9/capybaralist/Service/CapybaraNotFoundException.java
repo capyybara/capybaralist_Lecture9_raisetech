@@ -6,3 +6,4 @@ public class CapybaraNotFoundException extends RuntimeException {
     }
 
 }
+
