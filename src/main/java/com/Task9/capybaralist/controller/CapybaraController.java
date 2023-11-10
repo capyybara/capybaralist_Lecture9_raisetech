@@ -35,11 +35,18 @@ public class CapybaraController {
         return zoos;
     }
 
-//特定のzoo_idのカピバラのデータ取得
+//特定のzoo_idのカピバラのデータ取得 第１案
     @GetMapping("/capybara/{zoo_id}")
-    public Optional<Capybara> capybara (@PathVariable("zoo_id") int zoo_id) throws Exception {
+    public Optional<Capybara> capybara (@PathVariable("zoo_id") int zoo_id) throws Exception{
         return  capybaraService.findById(zoo_id);
     }
+
+//第２案
+    @GetMapping("/capybara/{zoo_id}")
+    public Capybara getcapybara (@PathVariable("zoo_id") int zoo_id){
+        return  capybaraService.findById(zoo_id).orElseThrow(() -> new CapybaraNotFoundException("Capybara not found"));
+    }
+
 
 
 //例外処理に関するメソッド
