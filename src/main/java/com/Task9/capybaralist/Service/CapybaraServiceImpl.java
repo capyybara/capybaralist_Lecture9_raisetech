@@ -36,7 +36,7 @@ public class CapybaraServiceImpl implements CapybaraService {
 //    public Optional<Capybara> findById(int zoo_id) throws Exception {
 //        Optional<Capybara> capybara = capybaraMapper.findById(zoo_id);
 //        if (capybara .isEmpty()){
-//            throw new NotFoundException("見つかりません");
+//            throw new CapybaraNotFoundException("Capybara is not found");
 //        }else {
 //            return capybara;
 //        }
