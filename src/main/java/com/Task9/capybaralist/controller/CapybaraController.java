@@ -42,10 +42,10 @@ public class CapybaraController {
     }
 
 //第２案
-    @GetMapping("/capybara/{zoo_id}")
-    public Capybara getcapybara (@PathVariable("zoo_id") int zoo_id){
-        return  capybaraService.findById(zoo_id).orElseThrow(() -> new CapybaraNotFoundException("Capybara is not found"));
-    }
+//    @GetMapping("/capybara/{zoo_id}")
+//    public Capybara getcapybara (@PathVariable("zoo_id") int zoo_id){
+//        return  capybaraService.findById(zoo_id).orElseThrow(() -> new CapybaraNotFoundException("Capybara is not found"));
+//    }
 
 
 
