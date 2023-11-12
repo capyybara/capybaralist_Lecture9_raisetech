@@ -24,10 +24,10 @@ public class CapybaraServiceImpl implements CapybaraService {
         return capybaraMapper.findAll();
     }
 
-//    特定のzoo_idのカピバラのデータを抽出
+//    特定のzooIdのカピバラのデータを抽出
     @Override
-    public Optional<Capybara> findById(int zoo_id) {
-       Capybara capybara = capybaraMapper.findById(zoo_id).orElseThrow(()->new CapybaraNotFoundException("Capybara is not found"));
+    public Optional<Capybara> findById(int zooId) {
+       Capybara capybara = capybaraMapper.findById(zooId).orElseThrow(()->new CapybaraNotFoundException("Capybara is not found"));
         return  Optional.of(capybara);
     }
 

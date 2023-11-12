@@ -10,7 +10,7 @@ import java.util.Optional;
 public interface CapybaraService {
     List<Zoo> findAll();
 
-    Optional<Capybara> findById(int zoo_id);
+    Optional<Capybara> findById(int zooId);
 
 
 
