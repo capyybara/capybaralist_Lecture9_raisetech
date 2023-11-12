@@ -2,18 +2,18 @@ package com.Task9.capybaralist.entity;
 
 public class Zoo {
 
-    private int zoo_id;
+    private int zooId;
     private String zooname;
     private String prefecture;
 
-    public Zoo(int zoo_id, String zooname, String prefecture) {
-        this.zoo_id = zoo_id;
+    public Zoo(int zooId, String zooname, String prefecture) {
+        this.zooId = zooId;
         this.zooname = zooname;
         this.prefecture = prefecture;
     }
 
-    public int getZoo_id() {
-        return zoo_id;
+    public int getZooId() {
+        return zooId;
     }
 
     public String getZooname() {

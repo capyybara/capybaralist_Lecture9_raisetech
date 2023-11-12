@@ -1,18 +1,21 @@
 package com.Task9.capybaralist.Service;
 
 
+import com.Task9.capybaralist.entity.Capybara;
 import com.Task9.capybaralist.mapper.CapybaraMapper;
 import com.Task9.capybaralist.entity.Zoo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
-public class CapybaraServiceImpl implements CapybaraService{
+public class CapybaraServiceImpl implements CapybaraService {
 
     private CapybaraMapper capybaraMapper;
-    public CapybaraServiceImpl (CapybaraMapper capybaraMapper){
+
+    public CapybaraServiceImpl(CapybaraMapper capybaraMapper) {
         this.capybaraMapper = capybaraMapper;
     }
 
@@ -21,16 +24,21 @@ public class CapybaraServiceImpl implements CapybaraService{
         return capybaraMapper.findAll();
     }
 
+//    特定のzooIdのカピバラのデータを抽出
+    @Override
+    public Optional<Capybara> findById(int zooId) {
+       Capybara capybara = capybaraMapper.findById(zooId).orElseThrow(()->new CapybaraNotFoundException("Capybara is not found"));
+        return  Optional.of(capybara);
+    }
 
-//  カピバラテーブルから、例外をハンドリングしてデータ取得したい
 //    @Override
 //    public Optional<Capybara> findById(int zoo_id) throws Exception {
 //        Optional<Capybara> capybara = capybaraMapper.findById(zoo_id);
-//        if capybara isEmpty(){
-//            throw new NotFoundException("見つかりません");
+//        if (capybara .isEmpty()){
+//            throw new CapybaraNotFoundException("Capybara is not found");
+//        }else {
+//            return capybara;
 //        }
 //    }
-
-
 
 }
